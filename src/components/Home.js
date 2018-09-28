@@ -11,9 +11,9 @@ class Home extends Component {
                     <h2>Welcome to BITEhack page </h2>
                     <p>Ta strona jest o hackathonie</p>
                 </Jumbotron>
-                <a href="http://www.bait.best.krakow.pl">
-                    <Button bsStyle="primary" >Poprzednia edycja</Button>
-                </a>
+                <Link to="http://www.bait.best.krakow.pl" href="http://www.bait.best.krakow.pl">
+                    <Button  bsStyle="info" >Poprzednia edycja</Button>
+                </Link>
             </Grid>
         );
     }

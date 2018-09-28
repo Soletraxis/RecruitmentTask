@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Navbar, Nav, NavItem, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
+import './CustomNavbar.css'
 
 
 class CustomNavbar extends Component {
@@ -10,7 +11,7 @@ class CustomNavbar extends Component {
                 <Navbar.Header>
                     <Navbar.Brand>
                         <Link to="/">
-                            <Image src="src/img/BITEhack_logo.png" />
+                            <Image src="https://bitehack.best.krakow.pl/logo_bitehack.png"/>
                         </Link>
                     </Navbar.Brand>
                 </Navbar.Header>
