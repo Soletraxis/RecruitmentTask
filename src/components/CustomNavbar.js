@@ -16,14 +16,14 @@ class CustomNavbar extends Component {
                     </Navbar.Brand>
                 </Navbar.Header>
                 <Nav>
-                    <NavItem eventKey={1} componentClass={Link} to="/" href="/">
-                        Home
+                    <NavItem eventKey={1} componentClass={Link} to="/hackathon" href="/hackathon">
+                        Hackathon
                      </NavItem>
-                    <NavItem eventKey={2} componentClass={Link} to="/organizers" href="/organizers">
-                        Organizers
+                    <NavItem eventKey={2} componentClass={Link} to="/partners" href="/partner">
+                        Partnerzy
                     </NavItem>
-                    <NavItem eventKey={3} componentClass={Link} to="/partners" href="/partners">
-                        Partners
+                    <NavItem eventKey={3} componentClass={Link} to="/organizers" href="/organizers">
+                        Organizatorzy
                     </NavItem>
                 </Nav>
 

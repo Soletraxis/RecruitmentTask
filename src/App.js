@@ -7,6 +7,7 @@ import Partners from './components/Partners';
 import Navbar from './components/CustomNavbar';
 import Footer from './components/Footer';
 import Particles from './components/Particles';
+import Hackathon from './components/Hackathon';
 import "./App.css"
 
 class App extends Component {
@@ -15,18 +16,13 @@ class App extends Component {
       <div className="App">
           <Router>
               <div>
-                  <div className="Particles">
-                      <Particles/>
-                  </div>
+                  <Particles/>
                   <Navbar />
                   <Route exact path="/" component={Home} />
+                  <Route path="/hackathon" component={Hackathon} />
                   <Route path="/organizers" component={Organizers} />
                   <Route path="/partners" component={Partners} />
                   <Footer/>
-
-
-
-
               </div>
           </Router>
       </div>

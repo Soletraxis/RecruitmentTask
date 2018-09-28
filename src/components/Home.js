@@ -13,7 +13,7 @@ class Home extends Component {
                         you can <strong>HACK IT</strong>
                     </h1>
                     <p>
-                     <a  href="https://www.newsite.best.krakow.pl/">
+                     <a href="https://www.newsite.best.krakow.pl/">
                          Poznaj nas >
                      </a>
                     </p>
