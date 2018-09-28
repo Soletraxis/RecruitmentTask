@@ -6,3 +6,29 @@
 
 }
 
+.logo{
+    width: 70%;
+    margin-top: 10px;
+}
+.organizers-section a:hover{
+    text-decoration: none;
+
+}
+
+.organizers-section {
+    text-align: left;
+    padding-left: 50px ;
+}
+
+.organizer-title {
+    margin-top: 10px;
+}
+
+.organizer-mail {
+    margin-bottom: 10px;
+}
+
+.best-section {
+    text-align: left;
+    padding-left: 30px;
+}

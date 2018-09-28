@@ -7,7 +7,7 @@ import './CustomNavbar.css'
 class CustomNavbar extends Component {
     render() {
         return (
-            <Navbar default >
+            <Navbar default transparent>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <Link to="/">
