@@ -7,13 +7,17 @@ class Home extends Component {
     render() {
         return (
             <Grid>
-                <Jumbotron>
-                    <h2>Welcome to BITEhack page </h2>
-                    <p>Ta strona jest o hackathonie</p>
-                </Jumbotron>
-                <Link to="http://www.bait.best.krakow.pl" href="http://www.bait.best.krakow.pl">
-                    <Button  bsStyle="info" >Poprzednia edycja</Button>
-                </Link>
+                <div className="dream">
+                    <h1>
+                        If you can dream <strong>IT</strong><br/>
+                        you can <strong>HACK IT</strong>
+                    </h1>
+                    <p>
+                     <a  href="https://www.newsite.best.krakow.pl/">
+                         Poznaj nas >
+                     </a>
+                    </p>
+                </div>
             </Grid>
         );
     }

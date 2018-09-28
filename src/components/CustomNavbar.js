@@ -11,7 +11,7 @@ class CustomNavbar extends Component {
                 <Navbar.Header>
                     <Navbar.Brand>
                         <Link to="/">
-                            <Image src="https://bitehack.best.krakow.pl/logo_bitehack.png"/>
+                            <Image src={require('../img/bitehack_logo_fluo.png')}/>
                         </Link>
                     </Navbar.Brand>
                 </Navbar.Header>

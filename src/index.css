@@ -5,6 +5,9 @@ body {
   color: white;
   background-color: black;
   text-align: center;
+  background-image:  url('./img/tlo.jpg');
+  background-repeat: repeat-y;
+  background-size:100%;
 
 }
 body h1{

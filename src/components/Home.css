@@ -1,0 +1,25 @@
+.dream{
+    padding-left: 40%;
+    margin-top: 70px;
+    text-align: left;
+}
+
+.dream h1{
+
+    font-size: 60px;
+    font-weight: 400;
+    padding-bottom: 50px;
+
+}
+strong{
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+a:hover{
+    color: grey;
+}

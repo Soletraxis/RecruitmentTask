@@ -13,6 +13,11 @@
     margin-left: 20px;
 }
 
+.navbar-default .navbar-header{
+    display: inline-block;
+}
+
+
 .navbar-default .navbar-nav {
     text-align: right;
     margin-right: 100px;
