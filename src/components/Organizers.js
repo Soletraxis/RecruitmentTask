@@ -24,9 +24,9 @@ class Organizers extends Component {
                             <Image src={require('../img/michal.jpg')} circle />
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
-                            <strong>Koordynator Projektu</strong><br/>
-                                Michał Błasiak<br/>
-                                <a href="mailto:michal.blasiak@best.krakow.pl">michal.blasiak@best.krakow.pl</a>
+                            <strong>Koordynator projektu</strong><br/>
+                            <i className="far fa-user"></i> Michał Błasiak<br/>
+                            <i className="far fa-envelope"></i> <a href="mailto:michal.blasiak@best.krakow.pl">michal.blasiak@best.krakow.pl</a>
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
@@ -34,8 +34,8 @@ class Organizers extends Component {
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                            <strong>Koordynator ds. kontaktu z firmami</strong> <br/>
-                                Agata Redlich<br/>
-                                <a href="mailto:agata.redlich@best.krakow.pl">agata.redlich@best.krakow.pl</a>
+                            <i className="far fa-user"></i> Agata Redlich<br/>
+                            <i className="far fa-envelope"></i> <a href="mailto:agata.redlich@best.krakow.pl">agata.redlich@best.krakow.pl</a>
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
@@ -43,8 +43,8 @@ class Organizers extends Component {
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. designu i promocji</strong> <br/>
-                            Renata Radzewicz<br/>
-                            <a href="mailto:renata.radzewicz@best.krakow.pl">renata.radzewicz@best.krakow.pl</a>
+                            <i className="far fa-user"></i> Renata Radzewicz<br/>
+                            <i className="far fa-envelope"></i> <a href="mailto:renata.radzewicz@best.krakow.pl">renata.radzewicz@best.krakow.pl</a>
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
@@ -52,8 +52,8 @@ class Organizers extends Component {
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. logistyki</strong> <br/>
-                            Katarzyna Radomska<br/>
-                            <a href="mailto:katarzyna.radomska@best.krakow.pl">katarzyna.radoska@best.krakow.pl</a>
+                            <i className="far fa-user"></i> Katarzyna Radomska<br/>
+                            <i className="far fa-envelope"></i> <a href="mailto:katarzyna.radomska@best.krakow.pl">katarzyna.radoska@best.krakow.pl</a>
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
@@ -61,8 +61,8 @@ class Organizers extends Component {
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. hackathonu klasycznego</strong> <br/>
-                            Przemysław Przebieglec<br/>
-                            <a href="mailto:przemyslaw.przebieglec@best.krakow.pl">przemyslaw.przebielec@best.krakow.pl</a>
+                            <i className="far fa-user"></i> Przemysław Przebieglec<br/>
+                            <i className="far fa-envelope"></i> <a href="mailto:przemyslaw.przebieglec@best.krakow.pl">przemyslaw.przebielec@best.krakow.pl</a>
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
@@ -70,8 +70,8 @@ class Organizers extends Component {
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. hackathonu robotycznego</strong> <br/>
-                            Albert Łuczak<br/>
-                            <a href="mailto:albert.luczak@best.krakow.pl">albert.luczak@best.krakow.pl</a>
+                            <i className="far fa-user"></i> Albert Łuczak<br/>
+                            <i className="far fa-envelope"></i> <a href="mailto:albert.luczak@best.krakow.pl">albert.luczak@best.krakow.pl</a>
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={3}>
@@ -79,11 +79,10 @@ class Organizers extends Component {
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. zasobów ludzkich</strong> <br/>
-                            Dominik Kołodziej<br/>
-                            <a href="mailto:dominik.kolodziej@best.krakow.pl">dominik.kolodziej@best.krakow.pl</a>
+                            <i className="far fa-user"></i> Dominik Kołodziej<br/>
+                            <i className="far fa-envelope"></i> <a href="mailto:dominik.kolodziej@best.krakow.pl">dominik.kolodziej@best.krakow.pl</a>
                         </Col>
                     </Row>
-
                 </Grid>
             </div>
         );
