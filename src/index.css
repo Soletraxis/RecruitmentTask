@@ -14,12 +14,21 @@ body h1{
     font-family: 'Montserrat', sans-serif;
 }
 
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+a {
+    text-decoration: none;
+    color: white;
+
 }
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: grey;
+}
+
 
 
 

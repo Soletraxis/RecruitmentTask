@@ -21,7 +21,7 @@ class Organizers extends Component {
                     <Row className="coreTeam">
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
-                            <Image src={require('../img/michal.jpg')} circle />
+                            <Image src={require('../img/ct/michal.jpg')} circle />
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator projektu</strong><br/>
@@ -30,7 +30,7 @@ class Organizers extends Component {
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
-                            <Image src={require('../img/agata.jpg')} circle />
+                            <Image src={require('../img/ct/agata.jpg')} circle />
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                            <strong>Koordynator ds. kontaktu z firmami</strong> <br/>
@@ -39,7 +39,7 @@ class Organizers extends Component {
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
-                            <Image src={require('../img/renata.jpg')} circle />
+                            <Image src={require('../img/ct/renata.jpg')} circle />
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. designu i promocji</strong> <br/>
@@ -48,7 +48,7 @@ class Organizers extends Component {
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
-                            <Image src={require('../img/katarzyna.jpg')} circle />
+                            <Image src={require('../img/ct/katarzyna.jpg')} circle />
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. logistyki</strong> <br/>
@@ -57,7 +57,7 @@ class Organizers extends Component {
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
-                            <Image src={require('../img/przemyslaw.jpg')} circle />
+                            <Image src={require('../img/ct/przemyslaw.jpg')} circle />
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. hackathonu klasycznego</strong> <br/>
@@ -66,7 +66,7 @@ class Organizers extends Component {
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
-                            <Image src={require('../img/albert.jpg')} circle />
+                            <Image src={require('../img/ct/albert.jpg')} circle />
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. hackathonu robotycznego</strong> <br/>
@@ -75,7 +75,7 @@ class Organizers extends Component {
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={3}>
-                            <Image src={require('../img/dominik.jpg')} circle />
+                            <Image src={require('../img/ct/dominik.jpg')} circle />
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. zasobów ludzkich</strong> <br/>
