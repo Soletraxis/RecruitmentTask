@@ -1,3 +1,0 @@
-# BITEhack_page
-
-Hi
