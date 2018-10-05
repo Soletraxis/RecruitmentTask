@@ -1,0 +1,37 @@
+.carouselItem{
+    width: 90%;
+
+}
+
+.carousel{
+    align-content: center;
+    align-items: center;
+    width: 60%;
+    height: 300px;
+    display: flex;
+}
+
+.hackathon {
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+.containerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+}
+
+img {
+    height: auto;
+    width: auto;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    align-self: center;
+}
