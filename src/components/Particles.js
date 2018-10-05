@@ -21,43 +21,43 @@ class ParticlesJS extends Component{
                         opacity: 0.4,
                         width: 1
                     },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
                         },
                         polygon: {
                             nb_sides: 7
                         }
                     },
-                    "interactivity": {
-                        "detect_on": "canvas",
-                        "events": {
-                            "onhover": {
-                                "enable": false,
-                                "mode": "grab"
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: "grab"
                             },
-                            "onclick": {
-                                "enable": false,
-                                "mode": "push"
+                            onclick: {
+                                enable: true,
+                                mode: "push"
                             },
-                            "resize": true
+                            resize: true
                         },
-                        "modes": {
-                            "grab": {
-                                "distance": 200,
-                                "line_linked": {
-                                    "opacity": 1
+                        modes: {
+                            grab: {
+                                distance: 200,
+                                line_linked: {
+                                    opacity: 1
                                 }
                             },
-                            "repulse": {
-                                "distance": 200,
-                                "duration": 0.4
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4
                             }
                         }
                     },
-                    "retina_detect": true
+                    retina_detect: true
                 }}
                 style={{
                     position: 'fixed',
@@ -65,7 +65,7 @@ class ParticlesJS extends Component{
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    zIndex: -1,
+                    zIndex: 0,
 
                 }}
             />
