@@ -1,15 +1,20 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Ubuntu', sans-serif;
-  color: white;
-  background-color: black;
-  text-align: left;
-  background-image:  url('./img/tlo.jpg');
-  background-repeat: repeat-y;
-  background-size:100%;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-align: left;
+    background: black url('./img/tlo.jpg') repeat-y;
+    background-size: 100%;
 
 }
+
 body h1{
     font-family: 'Montserrat', sans-serif;
 }

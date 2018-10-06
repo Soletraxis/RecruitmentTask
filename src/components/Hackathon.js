@@ -16,7 +16,7 @@ class Hackathon extends Component {
                   {carouselContent.map((user) =>
                     <Carousel.Item>
                       <div className='containerImg'>
-                        <img  alt='900x600' src={user} />
+                        <img className='img' alt='900x600' src={user} />
                       </div>
                     </Carousel.Item>
                   )}
