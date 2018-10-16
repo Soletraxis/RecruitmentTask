@@ -7,7 +7,7 @@
     align-content: center;
     /* align-items: center; */
     width: 100%;
-    height: 450px;
+    height: 500px;
     display: flex;
     padding-bottom: 20px;
 }
@@ -27,7 +27,7 @@
     align-items: center;
     flex: 1;
 
-}*/
+}
 
 .img {
     height: auto;
@@ -48,4 +48,12 @@
     font-size: large;
     padding-bottom: 20px;
     padding-right: 20px;
+}
+
+.hackathon  img {
+ width: 80%;
+}
+
+.description2,.description3   {
+    padding-top: 30px;
 }
