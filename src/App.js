@@ -8,6 +8,8 @@ import Navbar from './components/CustomNavbar';
 import Footer from './components/Footer';
 import Particles from './components/Particles';
 import Hackathon from './components/Hackathon';
+import Register from './components/Register';
+
 import "./App.css"
 
 class App extends Component {
@@ -22,6 +24,8 @@ class App extends Component {
                   <Route path="/hackathon" component={Hackathon} />
                   <Route path="/organizers" component={Organizers} />
                   <Route path="/partners" component={Partners} />
+                  <Route path="/register" component={Register} />
+
                   <Footer/>
               </div>
           </Router>

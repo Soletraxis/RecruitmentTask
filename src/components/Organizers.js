@@ -53,7 +53,7 @@ class Organizers extends Component {
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
                             <strong>Koordynator ds. logistyki</strong> <br/>
                             <i className="far fa-user"></i> Katarzyna Radomska<br/>
-                            <i className="far fa-envelope"></i> <a href="mailto:katarzyna.radomska@best.krakow.pl">katarzyna.radoska@best.krakow.pl</a>
+                            <i className="far fa-envelope"></i> <a href="mailto:katarzyna.radomska@best.krakow.pl">katarzyna.radomska@best.krakow.pl</a>
                         </Col>
 
                         <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>

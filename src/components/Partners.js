@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Grid } from 'react-bootstrap';
+import { Grid , Image} from 'react-bootstrap';
 
 import "./Partners.css"
 import SponsorsData from '../Constants/SponsorsData'
@@ -12,11 +12,15 @@ import MainSponsorData from '../Constants/MainSponsorData'
 class Partners extends Component {
     render() {
         return (
-            <div>
+            <div className="partners">
                 <Grid>
                     <h2>
-                        Ta strona jest tylko podglądowa, będziemy ją na bieżąco budować w trakcie podpisywania umów
+                        Tu narazie nic nie ma, ale już niedługo pojawią się informacje o naszych partnerach :)
                     </h2>
+                    <Image src={require('../img/love.jpg')} className="love"/>
+
+                    {/*
+
                     <h3>Sponsor Główny</h3>
                   {MainSponsorData.map((sponsor) =>
                     <Sponsor
@@ -38,6 +42,9 @@ class Partners extends Component {
                         description={sponsor.description}
                       />
                   )}
+
+                  */}
+
                 </Grid>
             </div>
         );

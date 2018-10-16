@@ -8,7 +8,7 @@ class ParticlesJS extends Component{
             <Particles
                 params={{
                     number: {
-                        value: 400,
+                        value: 500,
                         density: {
                             enable: true,
                             value_area: 800
@@ -35,7 +35,7 @@ class ParticlesJS extends Component{
                         "detect_on": "canvas",
                         "events": {
                             "onhover": {
-                                "enable": false,
+                                "enable": true,
                                 "mode": "grab"
                             },
                             "onclick": {
@@ -46,7 +46,7 @@ class ParticlesJS extends Component{
                         },
                         "modes": {
                             "grab": {
-                                "distance": 200,
+                                "distance": 400,
                                 "line_linked": {
                                     "opacity": 1
                                 }
