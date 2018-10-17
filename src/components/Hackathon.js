@@ -43,8 +43,8 @@ class Hackathon extends Component {
                                     </Col>
                                     <Col xs={12} sm={8} className="description2">
                                         <p>
-                                            Pierwszą konkurencją jest maraton programowania. W ramach konkursu ok. <strong>100 uczestników</strong> zainteresowanych sektorem IT, współpracujących w maksymalnie czteroosobowych zespołach, będzie pracować przez 24h w wybranej technologii nad postawionym przez nas problemem. Po upłynięciu czasu przeznaczonego na wykonanie zadania odbędą się krótkie prezentacje projektu                                        </p>
-
+                                            Pierwszą konkurencją jest maraton programowania. W ramach konkursu ok. <strong>80 uczestników</strong> zainteresowanych sektorem IT, współpracujących w maksymalnie czteroosobowych zespołach, będzie pracować przez 24h w wybranej technologii nad postawionym przez nas problemem. Po upłynięciu czasu przeznaczonego na wykonanie zadania odbędą się krótkie prezentacje projektu.
+                                        </p>
                                     </Col>
                                 </Row>
                             </Grid>
@@ -61,7 +61,6 @@ class Hackathon extends Component {
                                         <p>
                                             W konkurencji robotycznej uczestnicy będą mieli za zadanie zaprojektować i zbudować od podstaw gotowy projekt, zarówno od strony softwarowej jak i hardwarowej przy użyciu dostarczonych przez organizatorów, a także przygotowanych przez uczestników komponentów. Na zrealizowanie zadania zespoły będą miały 24 godziny.
                                         </p>
-
                                     </Col>
                                 </Row>
                             </Grid>
