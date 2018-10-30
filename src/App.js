@@ -26,6 +26,7 @@ class App extends Component {
                   <Route path="/partners" component={Partners} />
                   <Route path="/register" component={Register} />
 
+
                   <Footer/>
               </div>
           </Router>

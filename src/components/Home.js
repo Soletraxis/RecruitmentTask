@@ -15,7 +15,7 @@ class Home extends Component {
                             </h1>
                             <p>
                              <a href="https://www.newsite.best.krakow.pl/">
-                                 Poznaj nas >
+                                 Poznaj nas &gt;<br/>
                              </a>
                             </p>
                         </Col>
