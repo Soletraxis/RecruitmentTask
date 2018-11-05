@@ -4,6 +4,8 @@ import {Grid, Image, Row} from 'react-bootstrap';
 import "./Register.css"
 import firebase from 'firebase'
 
+import {ToastContainer, ToastStore} from 'react-toasts';
+
 
 
 class Register extends Component {
@@ -56,6 +58,7 @@ class Register extends Component {
       // odrzuć
       this.setState({errors: validation});
       console.log('ODRZUCAM')
+      ToastStore.error('Niepoprawnie wprowadzone dane')
     } else {
       console.log('PRZYJME')
       let request = firebase.database();
@@ -65,17 +68,16 @@ class Register extends Component {
         request = request.ref('robotyczny');
       }
       request.push(req);
-      //firebase request
+      ToastStore.success('Twoje zgłoszenie zostało przyjęte')
     }
   }
 
     render() {
-
-      console.log(this.state.errors)
-        return (
+     return (
             <div className="register">
                 <Grid>
                   <form>
+                    {/*todo: zrobić że jak ktoś wyśle to formularz się czyści i można jeszcze czy email jest poprawny, dodać można jeszcze automatyczne wysyłanie emaili*/}
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
                     <div>
@@ -95,6 +97,7 @@ class Register extends Component {
                   </form>
 
                   <button type='submit' color='orange' className='button' onClick={this.submitForm}>Zgłaszam sprzeciw!</button>
+                  <ToastContainer store={ToastStore} position={ToastContainer.POSITION.TOP_CENTER}/>
                     {/*<h1>A może by tak stworzyć system rejestracyjny?</h1>
                     <Image src={require('../img/elon.jpg')}/>*/}
                 </Grid>
