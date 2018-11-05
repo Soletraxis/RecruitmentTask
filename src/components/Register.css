@@ -12,3 +12,7 @@ input {
 .button {
     color: black;
 }
+
+.error { border: solid red;
+    border-radius: 6px;
+}

@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 import {Grid, Image, Row} from 'react-bootstrap';
 
 import "./Register.css"
-import FormularData from '../Constants/FormularData'
+import firebase from 'firebase'
+
 
 
 class Register extends Component {
   state = {
     isClassic: true,
-    participantNumber: [1]
+    participantNumber: [1],
+    errors: []
   }
 
   changeCompetitionType = (type) => {
@@ -38,7 +40,7 @@ class Register extends Component {
       return req[q].length === 0;
     })
 
-    return xd.length;
+    return xd;
   }
 
   submitForm = () => {
@@ -49,16 +51,27 @@ class Register extends Component {
       const name = document.getElementById(`name${i}`).value.trim();
       Object.assign(req, {[`email${i}`]: email, [`name${i}`]: name});
     })
-    if(this.validate(req) !== 0) {
+    const validation = this.validate(req);
+    if(validation.length !== 0) {
       // odrzuć
+      this.setState({errors: validation});
       console.log('ODRZUCAM')
     } else {
       console.log('PRZYJME')
+      let request = firebase.database();
+      if(this.state.isClassic) {
+        request = request.ref('klasyczny');
+      } else {
+        request = request.ref('robotyczny');
+      }
+      request.push(req);
       //firebase request
     }
   }
 
     render() {
+
+      console.log(this.state.errors)
         return (
             <div className="register">
                 <Grid>
@@ -66,12 +79,12 @@ class Register extends Component {
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
                     <div>
-                      <div className='form-group'><label>Nazwa drużyny:  </label><input type='text' id={'teamName'}/></div>
+                      <div className='form-group'><label>Nazwa drużyny:  </label><input type='text' id={'teamName'} className={this.state.errors.includes('teamName') ? 'error' : '' }/></div>
                       {this.state.participantNumber.map((i) => {
                         return(
                           <div className="form-group" key={i}>
-                            <label>Email:  </label><input type='text' id={`email${i}`}/>
-                            <label>Imię i nazwisko: <input type='text' id={`name${i}`}/></label>
+                            <label>Email:  </label><input type='text' id={`email${i}`} className={this.state.errors.includes(`email${i}`) ? 'error' : '' }/>
+                            <label>Imię i nazwisko: <input type='text' id={`name${i}`} className={this.state.errors.includes(`name${i}`) ? 'error' : '' }/></label>
                             {i === this.state.participantNumber.length && i !== 1 &&
                             <span className="glyphicon glyphicon-minus" onClick={this.decreaseParticipant}/> }
                           </div>
