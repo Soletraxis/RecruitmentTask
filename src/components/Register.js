@@ -7,11 +7,20 @@ import FormularData from '../Constants/FormularData'
 
 class Register extends Component {
   state = {
-    isClassic: true
+    isClassic: true,
+    participantNumber: [1]
   }
 
   changeCompetitionType = (type) => {
     this.setState({ isClassic: type })
+  }
+
+  addParticipant = () => {
+    if(this.state.participantNumber.length < 4) {
+      this.setState(prevState => {
+        return {participantNumber: [...prevState.participantNumber, prevState.participantNumber[prevState.participantNumber.length - 1]]}
+      })
+    }
   }
 
   formularField = (data) => {
@@ -35,12 +44,12 @@ class Register extends Component {
         return (
             <div className="register">
                 <Grid>
-                  <form>
+                  <form action={f=>f}>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
                     <div>
                       <div className='form-group'><label>Nazwa drużyny:  </label><input type='text'/></div>
-                      {[1,2,3,4].map(() => {
+                      {this.state.participantNumber.map(() => {
                         return(
                           <div className="form-group">
                             <label>Email:  </label><input type='text'/>
@@ -49,7 +58,7 @@ class Register extends Component {
                         )
                       }) }
                     </div>
-
+                    {this.state.participantNumber.length < 4 && <span className="glyphicon glyphicon-plus-sign" onClick={this.addParticipant}/>}
                   {/*{FormularData.map((formField) => {
                     formField.isForm ? this.formularField(formField) : this.dottedField(formField)
                     this.dottedField(2);
