@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "./Hackathon.css"
-import { Carousel, Image } from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap'
 
 import { Grid, Row, Col} from 'react-bootstrap';
 
