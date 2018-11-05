@@ -18,8 +18,16 @@ class Register extends Component {
   addParticipant = () => {
     if(this.state.participantNumber.length < 4) {
       this.setState(prevState => {
-        return {participantNumber: [...prevState.participantNumber, prevState.participantNumber[prevState.participantNumber.length - 1]]}
+        return {participantNumber: [...prevState.participantNumber, prevState.participantNumber[prevState.participantNumber.length - 1]+1]}
       })
+    }
+  }
+  decreaseParticipant = () => {
+    if(this.state.participantNumber.length > 1) {
+      const dupa = this.state.participantNumber;
+      dupa.pop();
+
+      this.setState({ participantNumber: dupa})
     }
   }
 
@@ -49,11 +57,13 @@ class Register extends Component {
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
                     <div>
                       <div className='form-group'><label>Nazwa drużyny:  </label><input type='text'/></div>
-                      {this.state.participantNumber.map(() => {
+                      {this.state.participantNumber.map((i) => {
                         return(
-                          <div className="form-group">
+                          <div className="form-group" key={i}>
                             <label>Email:  </label><input type='text'/>
                             <label>Imię i nazwisko: <input type='text'/></label>
+                            {i === this.state.participantNumber.length && i !== 1 &&
+                            <span className="glyphicon glyphicon-minus" onClick={this.decreaseParticipant}/> }
                           </div>
                         )
                       }) }
@@ -65,6 +75,7 @@ class Register extends Component {
                   })}*/}
                   </form>
 
+                  <button type='submit' color='orange' className='button' onClick={f=>f}>Zgłaszam sprzeciw!</button>
                     {/*<h1>A może by tak stworzyć system rejestracyjny?</h1>
                     <Image src={require('../img/elon.jpg')}/>*/}
                 </Grid>
