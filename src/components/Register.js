@@ -39,8 +39,14 @@ class Register extends Component {
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
                     <div>
+                      <div className='form-group'><label>Nazwa drużyny:  </label><input type='text'/></div>
                       {[1,2,3,4].map(() => {
-                        return(<div><input type='text'/></div>)
+                        return(
+                          <div className="form-group">
+                            <label>Email:  </label><input type='text'/>
+                            <label>Imię i nazwisko: <input type='text'/></label>
+                          </div>
+                        )
                       }) }
                     </div>
 
