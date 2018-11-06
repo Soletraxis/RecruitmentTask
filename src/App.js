@@ -11,15 +11,8 @@ import Hackathon from './components/Hackathon';
 import Register from './components/Register';
 
 import "./App.css"
-import config from './firebase-config'
-import firebase from 'firebase'
 
 class App extends Component {
-  componentDidMount() {
-    firebase.initializeApp(config);
-    //firebase.database().ref('dupa').push('nawalbrzych')
-  }
-
   render() {
     return (
       <div className="App">

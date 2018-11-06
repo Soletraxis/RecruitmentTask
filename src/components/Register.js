@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {Grid, Image, Row} from 'react-bootstrap';
+import {Grid} from 'react-bootstrap';
 
 import "./Register.css"
-import firebase from 'firebase'
 
 import {ToastContainer, ToastStore} from 'react-toasts';
+import sendData from '../OnlineStuff/SpreadSheetGoogle'
 
 
 
@@ -37,16 +37,16 @@ class Register extends Component {
   }
 
   validate = (req) => {
-    const chuj = Object.keys(req);
+    const keys = Object.keys(req);
 
-    return chuj.filter((q) => {
-      if(q.includes('email') && !req[q].match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)){
-        const penis = Object.assign(this.state.errorMessages, {[q]: 'no nie jest dobrze'})
-        console.log('xd')
-        this.setState({errorMessages: penis })
+    return keys.filter((key) => {
+      if(key.includes('email') && !req[key].match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)){
+        const errorMessages = Object.assign(this.state.errorMessages, {[key]: 'no nie jest dobrze'})
+
+        this.setState({errorMessages })
         return true;
       }
-      return req[q].length < 3;
+      return req[key].length < 3;
     })
   }
 
@@ -70,13 +70,7 @@ class Register extends Component {
     } else {
       console.log('PRZYJME')
 
-      let request = firebase.database();
-      if(this.state.isClassic) {
-        request = request.ref('klasyczny');
-      } else {
-        request = request.ref('robotyczny');
-      }
-      request.push(req);
+      sendData(req);
       document.getElementById('form').reset();
       ToastStore.success('Twoje zgłoszenie zostało przyjęte')
     }
@@ -89,12 +83,10 @@ class Register extends Component {
   }
 
     render() {
-    console.log(this.state.errorMessages)
      return (
             <div className="register">
                 <Grid>
                   <form action={f=>f} id='form'>
-                    {/*todo: zrobić że jak ktoś wyśle to formularz się czyści i można jeszcze czy email jest poprawny, dodać można jeszcze automatyczne wysyłanie emaili*/}
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
                     <div>
