@@ -38,10 +38,11 @@ const sendData = (data) => {
         }, function (err, cells) {
           cells[0].value = data.competitionType;
           cells[1].value = data.teamName;
+          cells[2].value = Object.keys(data).length/2-1;
           Object.keys(data).filter((key) => {
             return key !== 'teamName' && key !== 'competitionType'
           }).map((key, index) => {
-            cells[index + 2].value = data[key];
+            cells[index + 3].value = data[key];
           })
 
           sheet.bulkUpdateCells(cells);

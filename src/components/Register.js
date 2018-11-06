@@ -69,6 +69,9 @@ class Register extends Component {
       ToastStore.error('Niepoprawnie wprowadzone dane')
     } else {
       console.log('PRZYJME')
+      this.setState({
+        errorMessages: {}
+      })
       Object.assign(req, {competitionType: this.state.isClassic ? 'K' : 'R'})
       sendData(req);
       document.getElementById('form').reset();
