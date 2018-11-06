@@ -45,7 +45,9 @@ class Register extends Component {
     return xd;
   }
 
-  submitForm = () => {
+  submitForm = (e) => {
+    e.preventDefault();
+
     const req = {teamName: document.getElementById('teamName').value.trim()}
 
     this.state.participantNumber.map((i) => {
@@ -54,13 +56,15 @@ class Register extends Component {
       Object.assign(req, {[`email${i}`]: email, [`name${i}`]: name});
     })
     const validation = this.validate(req);
+    this.setState({errors: validation});
     if(validation.length !== 0) {
       // odrzuć
-      this.setState({errors: validation});
+
       console.log('ODRZUCAM')
       ToastStore.error('Niepoprawnie wprowadzone dane')
     } else {
       console.log('PRZYJME')
+
       let request = firebase.database();
       if(this.state.isClassic) {
         request = request.ref('klasyczny');
@@ -68,6 +72,7 @@ class Register extends Component {
         request = request.ref('robotyczny');
       }
       request.push(req);
+      document.getElementById('form').reset();
       ToastStore.success('Twoje zgłoszenie zostało przyjęte')
     }
   }
@@ -76,7 +81,7 @@ class Register extends Component {
      return (
             <div className="register">
                 <Grid>
-                  <form>
+                  <form action={f=>f} id='form'>
                     {/*todo: zrobić że jak ktoś wyśle to formularz się czyści i można jeszcze czy email jest poprawny, dodać można jeszcze automatyczne wysyłanie emaili*/}
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
@@ -93,10 +98,11 @@ class Register extends Component {
                         )
                       }) }
                     </div>
-                    {this.state.participantNumber.length < 4 && <span className="glyphicon glyphicon-plus-sign" onClick={this.addParticipant}/>}
+                    {this.state.participantNumber.length < 4 && <span className="glyphicon glyphicon-plus-sign" onClick={this.addParticipant}/>}<br/>
+                    <button type='submit' color='orange' className='button' onClick={this.submitForm}>Zgłaszam sprzeciw!</button>
+
                   </form>
 
-                  <button type='submit' color='orange' className='button' onClick={this.submitForm}>Zgłaszam sprzeciw!</button>
                   <ToastContainer store={ToastStore} position={ToastContainer.POSITION.TOP_CENTER}/>
                     {/*<h1>A może by tak stworzyć system rejestracyjny?</h1>
                     <Image src={require('../img/elon.jpg')}/>*/}
