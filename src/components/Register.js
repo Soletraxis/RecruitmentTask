@@ -57,7 +57,7 @@ class Register extends Component {
 
     this.state.participantNumber.map((i) => {
       const email = document.getElementById(`email${i}`).value.trim();
-      const name = document.getElementById(`name${i}`).value.trim();
+      const name = document.getElementById(`name${i}`).value;
       Object.assign(req, {[`email${i}`]: email, [`name${i}`]: name});
     })
     const validation = this.validate(req);
@@ -69,7 +69,7 @@ class Register extends Component {
       ToastStore.error('Niepoprawnie wprowadzone dane')
     } else {
       console.log('PRZYJME')
-
+      Object.assign(req, {competitionType: this.state.isClassic ? 'K' : 'R'})
       sendData(req);
       document.getElementById('form').reset();
       ToastStore.success('Twoje zgłoszenie zostało przyjęte')

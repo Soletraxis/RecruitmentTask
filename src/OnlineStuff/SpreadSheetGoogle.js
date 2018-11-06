@@ -36,11 +36,12 @@ const sendData = (data) => {
           'max-row': freeRowNumber,
           'return-empty': true
         }, function (err, cells) {
-          cells[0].value = data.teamName;
+          cells[0].value = data.competitionType;
+          cells[1].value = data.teamName;
           Object.keys(data).filter((key) => {
-            return key !== 'teamName'
+            return key !== 'teamName' && key !== 'competitionType'
           }).map((key, index) => {
-            cells[index + 1].value = data[key];
+            cells[index + 2].value = data[key];
           })
 
           sheet.bulkUpdateCells(cells);
