@@ -16,3 +16,20 @@ input {
 .error { border: solid red;
     border-radius: 6px;
 }
+
+.form-message {
+    display: inline-block;
+    align-self: flex-start;
+    flex: 1;
+}
+
+.form-dupa {
+    display: flex;
+    align-self: center;
+    width: 100%;
+    align-content: space-around;
+
+}
+.chuj {
+    float:right;
+}

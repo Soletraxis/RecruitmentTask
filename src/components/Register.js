@@ -12,7 +12,8 @@ class Register extends Component {
   state = {
     isClassic: true,
     participantNumber: [1],
-    errors: []
+    errors: [],
+    errorMessages: {}
   }
 
   changeCompetitionType = (type) => {
@@ -38,11 +39,15 @@ class Register extends Component {
   validate = (req) => {
     const chuj = Object.keys(req);
 
-    const xd = chuj.filter((q) => {
-      return req[q].length === 0;
+    return chuj.filter((q) => {
+      if(q.includes('email') && !req[q].match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)){
+        const penis = Object.assign(this.state.errorMessages, {[q]: 'no nie jest dobrze'})
+        console.log('xd')
+        this.setState({errorMessages: penis })
+        return true;
+      }
+      return req[q].length < 3;
     })
-
-    return xd;
   }
 
   submitForm = (e) => {
@@ -77,7 +82,14 @@ class Register extends Component {
     }
   }
 
+  errorMessage = (field) => {
+    if(this.state.errorMessages[field] !== undefined) {
+      return <div>{this.state.errorMessages[field]}</div>
+    }
+  }
+
     render() {
+    console.log(this.state.errorMessages)
      return (
             <div className="register">
                 <Grid>
@@ -89,11 +101,24 @@ class Register extends Component {
                       <div className='form-group'><label>Nazwa drużyny:  </label><input type='text' id={'teamName'} className={this.state.errors.includes('teamName') ? 'error' : '' }/></div>
                       {this.state.participantNumber.map((i) => {
                         return(
-                          <div className="form-group" key={i}>
-                            <label>Email:  </label><input type='text' id={`email${i}`} className={this.state.errors.includes(`email${i}`) ? 'error' : '' }/>
-                            <label>Imię i nazwisko: <input type='text' id={`name${i}`} className={this.state.errors.includes(`name${i}`) ? 'error' : '' }/></label>
-                            {i === this.state.participantNumber.length && i !== 1 &&
-                            <span className="glyphicon glyphicon-minus" onClick={this.decreaseParticipant}/> }
+                          <div className="form-dupa" key={i}>
+                            <div className='form-message'>
+                              <label>Email:
+                                <input type='text' id={`email${i}`} className={this.state.errors.includes(`email${i}`) ? 'error' : '' }/>
+                              </label>
+                              <br/>
+                              {this.errorMessage(`email${i}`)}
+                            </div>
+                            <div className='form-message'>
+                              <label>Imię i nazwisko:
+                                <input type='text' id={`name${i}`} className={this.state.errors.includes(`name${i}`) ? 'error' : '' }/>
+                              </label>
+
+                              {i === this.state.participantNumber.length && i !== 1 &&
+                              <span className="glyphicon glyphicon-minus" onClick={this.decreaseParticipant}/> }
+                              <br/>
+                              {this.errorMessage(`name${i}`)}
+                            </div>
                           </div>
                         )
                       }) }
