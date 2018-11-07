@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./Hackathon.css"
-import { Carousel, Image } from 'react-bootstrap'
-import {Panel, PanelGroup} from 'react-panel';
+import { Carousel, Panel, PanelGroup } from 'react-bootstrap'
+/*import {} from 'react-panel';*/
 
 import { Grid, Row, Col} from 'react-bootstrap';
 
@@ -86,28 +86,29 @@ class Hackathon extends Component {
                         )
                     </Carousel>
                 </div>
-
-                <div className="faq">
-                    <h3>Frequently Asked Questions</h3>
-                    <PanelGroup
-                        accordion
-                        id="accordion-controlled-example"
-                        activeKey={this.state.activeKey}
-                        onSelect={this.handleSelect}
-                    >
-                        <Panel eventKey="1">
-                            <Panel.Heading>
-                                <Panel.Title toggle>Panel heading 1</Panel.Title>
-                            </Panel.Heading>
-                            <Panel.Body collapsible>Panel content 1</Panel.Body>
-                        </Panel>
-                        <Panel eventKey="2">
-                            <Panel.Heading>
-                                <Panel.Title toggle>Panel heading 2</Panel.Title>
-                            </Panel.Heading>
-                            <Panel.Body collapsible>Panel content 2</Panel.Body>
-                        </Panel>
-                    </PanelGroup>
+                <div className='faq-container'>
+                    <div className="faq">
+                        <h3>Frequently Asked Questions</h3>
+                        <PanelGroup
+                            accordion
+                            id="accordion-controlled-example"
+                            activeKey={this.state.activeKey}
+                            onSelect={this.handleSelect}
+                        >
+                            <Panel eventKey="1">
+                                <Panel.Heading onClick={() => this.handleSelect('1')}>
+                                    <Panel.Title>Panel heading 1</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body collapsible>Panel content 1</Panel.Body>
+                            </Panel>
+                            <Panel eventKey="2">
+                                <Panel.Heading onClick={() => this.handleSelect('2')}>
+                                    <Panel.Title>Panel heading 2</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body collapsible>Panel content 2</Panel.Body>
+                            </Panel>
+                        </PanelGroup>
+                    </div>
                 </div>
             </div>
         );
