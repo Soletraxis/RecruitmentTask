@@ -67,5 +67,24 @@
     justify-content: center;
     align-items: center;
     flex: 1;
+}
 
+.faq-container h3{
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+.panel {
+    background-color: transparent;
+}
+.panel a{
+    text-decoration: underline;
+}
+.panel-group .panel {
+    border-radius: 1px;
+}
+
+.panel-heading {
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
 }
