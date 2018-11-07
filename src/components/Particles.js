@@ -31,12 +31,6 @@ class ParticlesJS extends Component{
                             nb_sides: 7
                         }
                     },
-                    interactivity: {
-                        detect_on: "canvas",
-                        events: {
-                            onhover: {
-                                enable: true,
-                                mode: "grab"
                     "interactivity": {
                         "detect_on": "canvas",
                         "events": {
@@ -50,11 +44,6 @@ class ParticlesJS extends Component{
                             },
                             resize: true
                         },
-                        modes: {
-                            grab: {
-                                distance: 200,
-                                line_linked: {
-                                    opacity: 1
                         "modes": {
                             "grab": {
                                 "distance": 400,
@@ -76,7 +65,7 @@ class ParticlesJS extends Component{
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    zIndex: 0,
+                    zIndex: -1,
 
                 }}
             />
