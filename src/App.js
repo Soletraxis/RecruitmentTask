@@ -13,16 +13,59 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import "./App.css"
 
+
+let height = 0;
+
+
 class App extends Component {
+  state = {
+    dimensions: null
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.resize)
+    this.setState({
+      dimensions: {
+        width: this.container.offsetWidth,
+        height: this.container.offsetHeight,
+      },
+    });
+    height = this.container.offsetHeight;
+  }
+
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize)
+  }
+
+  resize = () => this.forceUpdate()
+
+  isSameSize = () => {
+    if(this.state.dimensions !== null) {
+      const {height, width} = this.state.dimensions
+      if (height !== this.container.offsetHeight || width !== this.container.offsetWidth) {
+        this.setState({
+          dimensions: {
+            width: this.container.offsetWidth,
+            height: this.container.offsetHeight
+          }
+        })
+      }
+    }
+  }
+
   render() {
+    this.isSameSize();
     return (
-      <div className="App">
           <Router>
             <Route
               render={({location}) => (
-              <div>
+              <div style={styles.fill}>
                 <Particles/>
-                <Navbar />
+                <div ref={el => (this.container = el)}>
+                <Navbar/>
+                </div>
+                {this.state.dimensions && <div style={{...styles.fill, top: this.state.dimensions.height+ 90}}>
                 <TransitionGroup>
                   <CSSTransition
                     key={location.key}
@@ -39,13 +82,24 @@ class App extends Component {
                     </Switch>
                   </CSSTransition>
                 </TransitionGroup>
-                <Footer/>
+                </div>}
               </div>
               )}/>
           </Router>
-      </div>
     );
   }
 }
+
+const styles = {};
+
+styles.fill = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0
+};
+
+
 
 export default App;

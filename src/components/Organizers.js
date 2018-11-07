@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import { Grid, Row, Col, Image } from 'react-bootstrap';
 import "./Organizers.css";
+import ContentDiv from '../CustomComponents/ContentDiv'
+
 
 class Organizers extends Component {
     render() {
         return (
-            <div>
+            <ContentDiv >
                 <Grid>
                     <Row className="aboutBEST">
                         <Col xs={12} sm={6}>
@@ -84,7 +86,7 @@ class Organizers extends Component {
                         </Col>
                     </Row>
                 </Grid>
-            </div>
+            </ContentDiv>
         );
     }
 }

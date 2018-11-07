@@ -5,6 +5,7 @@ import "./Partners.css"
 import SponsorsData from '../Constants/SponsorsData'
 import Sponsor from '../CustomComponents/Sponsor'
 import MainSponsorData from '../Constants/MainSponsorData'
+import ContentDiv from '../CustomComponents/ContentDiv'
 
 
 
@@ -12,7 +13,7 @@ import MainSponsorData from '../Constants/MainSponsorData'
 class Partners extends Component {
     render() {
         return (
-            <div className="partners">
+            <ContentDiv className="partners">
                 <Grid>
                     <h2>
                         Tu narazie nic nie ma, ale już niedługo pojawią się informacje o naszych partnerach :)
@@ -46,7 +47,7 @@ class Partners extends Component {
                   */}
 
                 </Grid>
-            </div>
+            </ContentDiv>
         );
     }
 }

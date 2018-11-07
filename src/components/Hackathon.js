@@ -4,6 +4,7 @@ import { Carousel, Panel, PanelGroup } from 'react-bootstrap'
 /*import {} from 'react-panel';*/
 
 import { Grid, Row, Col} from 'react-bootstrap';
+import ContentDiv from '../CustomComponents/ContentDiv'
 
 
 class Hackathon extends Component {
@@ -23,7 +24,7 @@ class Hackathon extends Component {
 
     render() {
         return (
-            <div className="hackathon">
+            <ContentDiv className="hackathon" >
                 <div className="slide">
                     <Carousel
                         bsClass='carousel'
@@ -223,7 +224,7 @@ class Hackathon extends Component {
                         </PanelGroup>
                     </div>
                 </div>
-            </div>
+            </ContentDiv>
         );
     }
 }
