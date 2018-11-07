@@ -5,7 +5,7 @@ import "./Organizers.css";
 class Organizers extends Component {
     render() {
         return (
-            <div className={Organizers}>
+            <div>
                 <Grid>
                     <Row className="aboutBEST">
                         <Col xs={12} sm={6}>
