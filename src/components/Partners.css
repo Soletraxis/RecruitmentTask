@@ -1,5 +1,9 @@
+.partners {
+    text-align: center;
+}
+
 h2 {
-    color: red;
+    color: white;
     margin-bottom: 30px;
 }
 
@@ -24,4 +28,7 @@ h3 {
     margin-bottom: 40px;
 }
 
+.love {
+    width: 70%;
+}
 

@@ -25,6 +25,9 @@ class CustomNavbar extends Component {
                     <NavItem eventKey={3} componentClass={Link} to="/organizers" href="/organizers">
                         Organizatorzy
                     </NavItem>
+                    <NavItem eventKey={4} componentClass={Link} to="/register" href="/register" id="zapisy">
+                        Zapisz się!
+                    </NavItem>
                 </Nav>
 
             </Navbar>
