@@ -23,13 +23,13 @@ input {
     flex: 1;
 }
 
-.form-dupa {
-    display: flex;
-    align-self: center;
-    width: 100%;
-    align-content: space-around;
-
+.odal {
+    justify-content: center;
 }
-.chuj {
-    float:right;
+
+.odal div{
+    background: rgba(0,0,0,0);
+}
+.modal-content{
+    justify-content: center;
 }

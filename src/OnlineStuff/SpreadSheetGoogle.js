@@ -1,7 +1,7 @@
 import GoogleSpreadsheet from 'google-spreadsheet';
 import async from 'async';
 
-const sendData = (data) => {
+const sendData = (data, toast, errortoast) => {
   const doc = new GoogleSpreadsheet(process.env.REACT_APP_GOOGLESHEETID);
   let sheet;
   let freeRowNumber;
@@ -50,9 +50,13 @@ const sendData = (data) => {
           step();
         });
       },
+      (step) => {
+        toast()
+      }
     ],
     function (err) {
       if (err) {
+        errortoast();
         console.log('Error: ' + err);
       }
     })

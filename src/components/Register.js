@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {Grid} from 'react-bootstrap';
+import {Grid, FormGroup, FormControl, ControlLabel, Form, Col, Row, Modal} from 'react-bootstrap';
 
 import "./Register.css"
 
 import {ToastContainer, ToastStore} from 'react-toasts';
 import sendData from '../OnlineStuff/SpreadSheetGoogle'
-
+import {Dots} from 'react-activity';
+import 'react-activity/dist/react-activity.css';
 
 
 class Register extends Component {
@@ -29,10 +30,10 @@ class Register extends Component {
   }
   decreaseParticipant = () => {
     if(this.state.participantNumber.length > 1) {
-      const dupa = this.state.participantNumber;
-      dupa.pop();
+      const decreasedParticipantNumber = this.state.participantNumber;
+      decreasedParticipantNumber.pop();
 
-      this.setState({ participantNumber: dupa})
+      this.setState({ participantNumber: decreasedParticipantNumber})
     }
   }
 
@@ -52,7 +53,7 @@ class Register extends Component {
 
   submitForm = (e) => {
     e.preventDefault();
-
+    console.log(document.getElementById('name1').value)
     const req = {teamName: document.getElementById('teamName').value.trim()}
 
     this.state.participantNumber.map((i) => {
@@ -73,9 +74,10 @@ class Register extends Component {
         errorMessages: {}
       })
       Object.assign(req, {competitionType: this.state.isClassic ? 'K' : 'R'})
-      sendData(req);
+      sendData(req, () => ToastStore.success('Twoje zgłoszenie zostało przyjęte'),
+        () => ToastStore.error('Problem z połączeniem, sprawdź swoje połączenie z internetem i spróbuj ponownie')
+        );
       document.getElementById('form').reset();
-      ToastStore.success('Twoje zgłoszenie zostało przyjęte')
     }
   }
 
@@ -89,14 +91,45 @@ class Register extends Component {
      return (
             <div className="register">
                 <Grid>
-                  <form action={f=>f} id='form'>
+                  {/*<Modal show className='odal'>
+                    <div className='modal-content'>
+                    <Dots/>
+                    </div>
+                  </Modal>*/}
+                  <Form horizontal action={f=>f} id='form'>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
                     <div>
                       <div className='form-group'><label>Nazwa drużyny:  </label><input type='text' id={'teamName'} className={this.state.errors.includes('teamName') ? 'error' : '' }/></div>
                       {this.state.participantNumber.map((i) => {
                         return(
-                          <div className="form-dupa" key={i}>
+                          <Row form>
+                            <Col sm={4}>
+                              <FormGroup  controlId="formHorizontalEmail">
+                                <ControlLabel>Email</ControlLabel>
+                                <FormControl id={`email${i}`} type="email" placeholder="Email"/>
+                              </FormGroup>
+                            </Col>
+                            <Col sm={4}>
+                              <FormGroup controlId="formHorizontalEmail">
+                                <ControlLabel>Email</ControlLabel>
+                                <FormControl id={`name${i}`} type="email" placeholder="Email" />
+                              </FormGroup>
+                            </Col>
+                          </Row>
+                          /*<FormGroup>
+                            <ControlLabel>Imię</ControlLabel>
+                            <FormControl
+                              id={`name${i}`}
+                              type='text'
+                            />
+                            <ControlLabel>email</ControlLabel>
+                            <FormControl
+                              id={`email${i}`}
+                              type='text'
+                            />
+                          </FormGroup>
+                          /*<div className="form-dupa" key={i}>
                             <div className='form-message'>
                               <label>Email:
                                 <input type='text' id={`email${i}`} className={this.state.errors.includes(`email${i}`) ? 'error' : '' }/>
@@ -114,14 +147,14 @@ class Register extends Component {
                               <br/>
                               {this.errorMessage(`name${i}`)}
                             </div>
-                          </div>
+                          </div>*/
                         )
                       }) }
                     </div>
                     {this.state.participantNumber.length < 4 && <span className="glyphicon glyphicon-plus-sign" onClick={this.addParticipant}/>}<br/>
                     <button type='submit' color='orange' className='button' onClick={this.submitForm}>Zgłaszam sprzeciw!</button>
 
-                  </form>
+                  </Form>
 
                   <ToastContainer store={ToastStore} position={ToastContainer.POSITION.TOP_CENTER}/>
                     {/*<h1>A może by tak stworzyć system rejestracyjny?</h1>
