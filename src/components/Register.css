@@ -23,13 +23,12 @@ input {
     flex: 1;
 }
 
-.odal {
-    justify-content: center;
-}
-
 .odal div{
-    background: rgba(0,0,0,0);
-}
-.modal-content{
+    display: flex;
+
+    align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 90%;
+    background: rgba(0,0,0,0);
 }

@@ -1,10 +1,10 @@
 import GoogleSpreadsheet from 'google-spreadsheet';
 import async from 'async';
 
-const sendData = (data, toast, errortoast) => {
+const sendData = (data, toast, errortoast, hideModal) => {
   const doc = new GoogleSpreadsheet(process.env.REACT_APP_GOOGLESHEETID);
   let sheet;
-  let freeRowNumber;
+  let emptyRowNumber;
   async.series([
       function setAuth (step) {
         const creds = require('../bitehack-f53d0f56bcd4.json');
@@ -25,15 +25,15 @@ const sendData = (data, toast, errortoast) => {
         }, (err, cells) => {
             ++cells[0].value;
             sheet.bulkUpdateCells(cells)
-            freeRowNumber = cells[0].value;
+            emptyRowNumber = cells[0].value;
             step();
           }
         )
       },
       function workingWithCells (step) {
         sheet.getCells({
-          'min-row': freeRowNumber,
-          'max-row': freeRowNumber,
+          'min-row': emptyRowNumber,
+          'max-row': emptyRowNumber,
           'return-empty': true
         }, function (err, cells) {
           cells[0].value = data.competitionType;
@@ -51,7 +51,9 @@ const sendData = (data, toast, errortoast) => {
         });
       },
       (step) => {
-        toast()
+        hideModal();
+        toast();
+        step();
       }
     ],
     function (err) {

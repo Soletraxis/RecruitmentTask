@@ -14,7 +14,8 @@ class Register extends Component {
     isClassic: true,
     participantNumber: [1],
     errors: [],
-    errorMessages: {}
+    errorMessages: {},
+    modalStatus: false
   }
 
   changeCompetitionType = (type) => {
@@ -53,7 +54,8 @@ class Register extends Component {
 
   submitForm = (e) => {
     e.preventDefault();
-    console.log(document.getElementById('name1').value)
+    this.showModal();
+
     const req = {teamName: document.getElementById('teamName').value.trim()}
 
     this.state.participantNumber.map((i) => {
@@ -75,10 +77,23 @@ class Register extends Component {
       })
       Object.assign(req, {competitionType: this.state.isClassic ? 'K' : 'R'})
       sendData(req, () => ToastStore.success('Twoje zgłoszenie zostało przyjęte'),
-        () => ToastStore.error('Problem z połączeniem, sprawdź swoje połączenie z internetem i spróbuj ponownie')
+        () => ToastStore.error('Problem z połączeniem, sprawdź swoje połączenie z internetem i spróbuj ponownie'),
+        () => this.hideModal()
         );
       document.getElementById('form').reset();
     }
+  }
+
+  showModal = () => {
+    this.setState({
+      modalStatus: true
+    })
+  }
+
+  hideModal = () => {
+    this.setState({
+      modalStatus: false
+    })
   }
 
   errorMessage = (field) => {
@@ -91,11 +106,9 @@ class Register extends Component {
      return (
             <div className="register">
                 <Grid>
-                  {/*<Modal show className='odal'>
-                    <div className='modal-content'>
-                    <Dots/>
-                    </div>
-                  </Modal>*/}
+                  {this.state.modalStatus && <Modal show className='odal' >
+                    <Dots color='lightCyan'/>
+                  </Modal>}
                   <Form horizontal action={f=>f} id='form'>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
                     <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
