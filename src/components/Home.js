@@ -17,9 +17,9 @@ class Home extends Component {
                                 you can <strong>HACK IT</strong>
                             </h1>
                             <p>
-                                <Link to="https://www.newsite.best.krakow.pl/">
+                                <a href="https://www.newsite.best.krakow.pl/">
                                     Poznaj nas &gt;<br/>
-                                </Link>
+                                </a>
                             </p>
                             <p>
                                 <Link to="/hackathon#faq">
