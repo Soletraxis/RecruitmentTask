@@ -20,9 +20,9 @@ class Partners extends Component {
                     </h2>
                     <Image src={require('../img/love.jpg')} className="love"/>
 
-                    {/*
 
-                    <h3>Sponsor Główny</h3>
+
+                    {/*<h3>Sponsor Główny</h3>
                   {MainSponsorData.map((sponsor) =>
                     <Sponsor
                       imageRef={sponsor.imageRef}
@@ -42,9 +42,7 @@ class Partners extends Component {
                         xs={sponsor.xs}
                         description={sponsor.description}
                       />
-                  )}
-
-                  */}
+                  )}*/}
 
                 </Grid>
             </ContentDiv>
