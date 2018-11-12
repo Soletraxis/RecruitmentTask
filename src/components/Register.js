@@ -7,6 +7,7 @@ import {ToastContainer, ToastStore} from 'react-toasts';
 import sendData from '../OnlineStuff/SpreadSheetGoogle'
 import {Dots} from 'react-activity';
 import 'react-activity/dist/react-activity.css';
+import Countdown from '../CustomComponents/Countdown'
 
 
 class Register extends Component {
@@ -103,9 +104,17 @@ class Register extends Component {
     }
   }
 
+  isThereTimeLeft = () => {
+    const countDownDate = new Date("Nov 26, 2018 12:00:00").getTime();
+    const now = new Date().getTime();
+    const endOfRegistration = new Date('Jan 4, 2019 00:00:00').getTime();
+    return now > countDownDate && now < endOfRegistration
+  }
+
     render() {
      return (
             <div className="register">
+              {this.isThereTimeLeft() ?
                 <Grid>
                   {this.state.modalStatus && <Modal show className='odal' >
                     <Dots color='lightCyan'/>
@@ -131,6 +140,7 @@ class Register extends Component {
                       {this.state.participantNumber.map((i) => {
                         return(
                           <Row form>
+                            <div className='row-eq-height'>
                             <Col xs={5} debug>
                               <FormGroup  controlId="formHorizontalEmail" >
                                 <ControlLabel>{i === 1 ? "E-mail kapitana" : 'E-mail'}</ControlLabel>
@@ -145,13 +155,13 @@ class Register extends Component {
                             </Col>
                             {i === this.state.participantNumber.length && i > 2 &&
                             <Col xs={1} debug>
-                              <div className='daas'>
-                              <Glyphicon glyph='minus'/>
-                              </div>
-                              <div  onClick={this.decreaseParticipant}>
-                                <Glyphicon glyph='minus'/>
+                              <div  onClick={this.decreaseParticipant} className='daas'>
+                                <div className='qwe'>
+                                  <Glyphicon glyph='minus'/>
+                                </div>
                               </div>
                             </Col>}
+                            </div>
                           </Row>
                         )})}
                     </div>
@@ -172,6 +182,7 @@ class Register extends Component {
                     {/*<h1>A może by tak stworzyć system rejestracyjny?</h1>
                     <Image src={require('../img/elon.jpg')}/>*/}
                 </Grid>
+                : <Countdown/>}
             </div>
         );
     }
