@@ -59,6 +59,7 @@ const sendData = (data, toast, errortoast, hideModal) => {
     function (err) {
       if (err) {
         errortoast();
+        hideModal();
         console.log('Error: ' + err);
       }
     })

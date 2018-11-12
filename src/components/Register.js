@@ -69,6 +69,7 @@ class Register extends Component {
       // odrzuć
 
       console.log('ODRZUCAM')
+      this.hideModal();
       ToastStore.error('Niepoprawnie wprowadzone dane')
     } else {
       console.log('PRZYJME')
@@ -123,7 +124,7 @@ class Register extends Component {
                       <Col xs={5} xsOffset={3}>
                       <FormGroup>
                         <ControlLabel>Nazwa drużyny:  </ControlLabel>
-                        <FormControl id={'teamName'} className={this.state.errors.includes('teamName') ? 'error' : '' }/>
+                        <FormControl placeholder='Nazwa drużyny' id={'teamName'} className={this.state.errors.includes('teamName') ? 'error' : '' }/>
                       </FormGroup>
                       </Col>
                       </Row>
@@ -133,13 +134,13 @@ class Register extends Component {
                             <Col xs={5} debug>
                               <FormGroup  controlId="formHorizontalEmail" >
                                 <ControlLabel>{i === 1 ? "E-mail kapitana" : 'E-mail'}</ControlLabel>
-                                <FormControl id={`email${i}`} type="email" placeholder="E-mail"/>
+                                <FormControl id={`email${i}`} type="email" placeholder="E-mail" className={this.state.errors.includes(`email${i}`) ? 'error' : '' }/>
                               </FormGroup>
                             </Col>
                             <Col xs={5} xsOffset={1} debug>
                               <FormGroup controlId="formHorizontalEmail">
                                 <ControlLabel>{i === 1 ? 'Imię i nazwisko kapitana' : 'Imię i nazwisko'}</ControlLabel>
-                                <FormControl id={`name${i}`} type="text" placeholder="Imię i nazwisko" />
+                                <FormControl id={`name${i}`} type="text" placeholder="Imię i nazwisko" className={this.state.errors.includes(`name${i}`) ? 'error' : '' }/>
                               </FormGroup>
                             </Col>
                             {i === this.state.participantNumber.length && i > 2 &&
