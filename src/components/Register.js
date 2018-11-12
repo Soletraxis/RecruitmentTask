@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Grid, FormGroup, FormControl, ControlLabel, Form, Col, Row, Modal} from 'react-bootstrap';
+import {Grid, FormGroup, FormControl, ControlLabel, Form, Col, Row, Modal, Glyphicon} from 'react-bootstrap';
 
 import "./Register.css"
 
@@ -12,7 +12,7 @@ import 'react-activity/dist/react-activity.css';
 class Register extends Component {
   state = {
     isClassic: true,
-    participantNumber: [1],
+    participantNumber: [1, 2],
     errors: [],
     errorMessages: {},
     modalStatus: false
@@ -110,62 +110,60 @@ class Register extends Component {
                     <Dots color='lightCyan'/>
                   </Modal>}
                   <Form horizontal action={f=>f} id='form'>
-                    <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
-                    <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
+                    <Row>
+                      <Col xsOffset={3} xs={2}>
+                        <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
+                      </Col>
+                      <Col xsOffset={1} xs={2}>
+                        <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
+                      </Col>
+                    </Row>
                     <div>
-                      <div className='form-group'><label>Nazwa drużyny:  </label><input type='text' id={'teamName'} className={this.state.errors.includes('teamName') ? 'error' : '' }/></div>
+                      <Row>
+                      <Col xs={5} xsOffset={3}>
+                      <FormGroup>
+                        <ControlLabel>Nazwa drużyny:  </ControlLabel>
+                        <FormControl id={'teamName'} className={this.state.errors.includes('teamName') ? 'error' : '' }/>
+                      </FormGroup>
+                      </Col>
+                      </Row>
                       {this.state.participantNumber.map((i) => {
                         return(
                           <Row form>
-                            <Col sm={4}>
-                              <FormGroup  controlId="formHorizontalEmail">
-                                <ControlLabel>Email</ControlLabel>
-                                <FormControl id={`email${i}`} type="email" placeholder="Email"/>
+                            <Col xs={5} debug>
+                              <FormGroup  controlId="formHorizontalEmail" >
+                                <ControlLabel>{i === 1 ? "E-mail kapitana" : 'E-mail'}</ControlLabel>
+                                <FormControl id={`email${i}`} type="email" placeholder="E-mail"/>
                               </FormGroup>
                             </Col>
-                            <Col sm={4}>
+                            <Col xs={5} xsOffset={1} debug>
                               <FormGroup controlId="formHorizontalEmail">
-                                <ControlLabel>Email</ControlLabel>
-                                <FormControl id={`name${i}`} type="email" placeholder="Email" />
+                                <ControlLabel>{i === 1 ? 'Imię i nazwisko kapitana' : 'Imię i nazwisko'}</ControlLabel>
+                                <FormControl id={`name${i}`} type="text" placeholder="Imię i nazwisko" />
                               </FormGroup>
                             </Col>
+                            {i === this.state.participantNumber.length && i > 2 &&
+                            <Col xs={1} debug>
+                              <div className='daas'>
+                              <Glyphicon glyph='minus'/>
+                              </div>
+                              <div  onClick={this.decreaseParticipant}>
+                                <Glyphicon glyph='minus'/>
+                              </div>
+                            </Col>}
                           </Row>
-                          /*<FormGroup>
-                            <ControlLabel>Imię</ControlLabel>
-                            <FormControl
-                              id={`name${i}`}
-                              type='text'
-                            />
-                            <ControlLabel>email</ControlLabel>
-                            <FormControl
-                              id={`email${i}`}
-                              type='text'
-                            />
-                          </FormGroup>
-                          /*<div className="form-dupa" key={i}>
-                            <div className='form-message'>
-                              <label>Email:
-                                <input type='text' id={`email${i}`} className={this.state.errors.includes(`email${i}`) ? 'error' : '' }/>
-                              </label>
-                              <br/>
-                              {this.errorMessage(`email${i}`)}
-                            </div>
-                            <div className='form-message'>
-                              <label>Imię i nazwisko:
-                                <input type='text' id={`name${i}`} className={this.state.errors.includes(`name${i}`) ? 'error' : '' }/>
-                              </label>
-
-                              {i === this.state.participantNumber.length && i !== 1 &&
-                              <span className="glyphicon glyphicon-minus" onClick={this.decreaseParticipant}/> }
-                              <br/>
-                              {this.errorMessage(`name${i}`)}
-                            </div>
-                          </div>*/
-                        )
-                      }) }
+                        )})}
                     </div>
-                    {this.state.participantNumber.length < 4 && <span className="glyphicon glyphicon-plus-sign" onClick={this.addParticipant}/>}<br/>
-                    <button type='submit' color='orange' className='button' onClick={this.submitForm}>Zgłaszam sprzeciw!</button>
+                    <Row>
+                      <Col xsOffset={5} xs={1}>
+                        {this.state.participantNumber.length < 4 && <Glyphicon glyph='plus' onClick={this.addParticipant}/>}
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col smOffset={4} xs={3}>
+                        <button type='submit' color='orange' className='button' onClick={this.submitForm}>Zgłaszam drużynę!</button>
+                      </Col>
+                    </Row>
 
                   </Form>
 
