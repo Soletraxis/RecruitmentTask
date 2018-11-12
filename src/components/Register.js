@@ -9,8 +9,7 @@ class Register extends Component {
         return (
             <ContentDiv className="register">
                 <Grid>
-                    <h1>A może by tak stworzyć system rejestracyjny?</h1>
-                    <Image src={require('../img/elon.jpg')}/>
+                    <h1>Zapisy ruszają już 26 listopada!</h1>
                 </Grid>
             </ContentDiv>
         );

@@ -26,6 +26,11 @@ class Home extends Component {
                                     FAQ &gt;<br/>
                                 </Link>
                             </p>
+                            <p>
+                                <a href="http://www.bait.best.krakow.pl/2017/#/main/">
+                                    Poprzednia edycja &gt;<br/>
+                                </a>
+                            </p>
                         </Col>
                     </Row>
                 </div>

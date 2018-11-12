@@ -16,7 +16,7 @@ class Partners extends Component {
             <ContentDiv className="partners">
                 <Grid>
                     <h2>
-                        Tu narazie nic nie ma, ale już niedługo pojawią się informacje o naszych partnerach :)
+                        Tu na razie nic nie ma, ale już niedługo pojawią się informacje o naszych partnerach :)
                     </h2>
                     <Image src={require('../img/love.jpg')} className="love"/>
 
