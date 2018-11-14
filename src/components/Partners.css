@@ -4,16 +4,18 @@
 
 h2 {
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+
 }
 
-h3 {
+.Sdescription h3 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-top: 0px;
 }
 
 .SGimg {
     margin-top: -20px;
+    padding: 20px;
 }
 
 .SGimg img{
@@ -32,3 +34,11 @@ h3 {
     width: 70%;
 }
 
+.Sdescription {
+    text-align: left;
+}
+
+.Sdescription br {
+    line-height: 170%;
+
+}

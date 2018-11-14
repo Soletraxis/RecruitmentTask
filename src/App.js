@@ -5,7 +5,6 @@ import Home from './components/Home';
 import Organizers from './components/Organizers';
 import Partners from './components/Partners';
 import Navbar from './components/CustomNavbar';
-import Footer from './components/Footer';
 import Particles from './components/Particles';
 import Hackathon from './components/Hackathon';
 import Register from './components/Register';

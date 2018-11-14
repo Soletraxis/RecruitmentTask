@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Grid, Image} from 'react-bootstrap';
+import {Grid} from 'react-bootstrap';
 
 import "./Register.css"
 import ContentDiv from '../CustomComponents/ContentDiv'
