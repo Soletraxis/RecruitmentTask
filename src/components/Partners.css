@@ -2,9 +2,11 @@
     text-align: center;
 }
 
-h2 {
+.partners h2 {
     color: white;
     margin-bottom: 40px;
+    margin-top: 40px;
+    letter-spacing: 5px;
 
 }
 
@@ -42,3 +44,21 @@ h2 {
     line-height: 170%;
 
 }
+
+.patroni_div {
+    background-color: white;
+}
+
+.logoP1, .logoP2, .logoP3{
+    width: 70%;
+}
+
+.logoP2{
+    margin-top: 13%;
+}
+
+.logoP3{
+    margin-top: 22%;
+    margin-bottom:30px;
+}
+

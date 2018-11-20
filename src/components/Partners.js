@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Grid } from 'react-bootstrap';
+import {Grid, Row, Col, Image} from 'react-bootstrap';
 
 import "./Partners.css"
 import SponsorsData from '../Constants/SponsorsData'
@@ -43,6 +43,20 @@ class Partners extends Component {
                   )}*/}
 
 
+                    <h2>Patroni honorowi</h2>
+                    <div className="patroni_div">
+                        <Row classname = "patroni">
+                            <Col xs={12} sm={4} className="patron_logo">
+                                <a href="https://www.eaiib.agh.edu.pl/"><Image src={require('../img/partners/weaiib.jpg')} className="logoP1"  /></a>
+                            </Col>
+                            <Col xs={12} sm={4} className="patron_logo">
+                                <a href="http://www.iet.agh.edu.pl/pl/"><Image src={require('../img/partners/wiet.jpg')} className="logoP2"  /></a>
+                            </Col>
+                            <Col xs={12} sm={4} className="patron_logo">
+                                <a href="http://www.imir.agh.edu.pl/"><Image src={require('../img/partners/wimir.png')} className="logoP3"  /></a>
+                            </Col>
+                        </Row>
+                    </div>
                 </Grid>
             </ContentDiv>
         );
