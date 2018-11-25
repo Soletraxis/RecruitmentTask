@@ -111,6 +111,12 @@ class Register extends Component {
     return now > countDownDate && now < endOfRegistration
   }
 
+  isRoboticOver = () => {
+    const now = new Date().getTime();
+    const roboticTime = new Date('Dec 31, 2018 00:00:00').getTime();
+    return roboticTime < now
+  }
+
     render() {
      return (
             <div className="register">
@@ -125,7 +131,9 @@ class Register extends Component {
                         <label className="checkbox-inline" onClick={() => this.changeCompetitionType(true)}><input type="checkbox" checked={this.state.isClassic}/>Część Klasyczna</label>
                       </Col>
                       <Col xsOffset={1} xs={2}>
-                        <label className="checkbox-inline" onClick={() => this.changeCompetitionType(false)}><input type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
+                        <label className={`checkbox-inline ${this.isRoboticOver() ?  'gray-out' : ''}`} onClick={() => {
+                          if(!this.isRoboticOver()){ this.changeCompetitionType(false)}
+                        }}><input disabled={this.isRoboticOver()} type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
                       </Col>
                     </Row>
                     <div>

@@ -60,3 +60,7 @@ input {
     display: flex;
     flex-wrap: wrap;
 }
+
+.gray-out {
+    opacity: 0.5;
+}
