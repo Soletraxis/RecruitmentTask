@@ -120,7 +120,7 @@ class Register extends Component {
 
     render() {
      return (
-            <div className="register">
+            <ContentDiv className="register">
               {this.isThereTimeLeft() ?
                 <Grid>
                   {this.state.modalStatus && <Modal show className='odal' >
@@ -192,7 +192,7 @@ class Register extends Component {
                     <Image src={require('../img/elon.jpg')}/>*/}
                 </Grid>
                 : <Countdown/>}
-            </div>
+            </ContentDiv>
         );
     }
 }
