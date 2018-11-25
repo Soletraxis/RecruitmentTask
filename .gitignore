@@ -27,3 +27,4 @@ yarn-error.log*
 src/bitehack-f53d0f56bcd4\.json
 
 \.idea/workspace\.xml
+env

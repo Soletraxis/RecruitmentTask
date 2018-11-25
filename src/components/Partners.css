@@ -16,7 +16,7 @@
 }
 
 .SGimg {
-    margin-top: -20px;
+    margin-top: -200px;
     padding: 20px;
 }
 
@@ -38,6 +38,7 @@
 
 .Sdescription {
     text-align: left;
+    padding-left: 30px;
 }
 
 .Sdescription br {

@@ -77,7 +77,10 @@ class App extends Component {
                       <Route exact path="/partners" component={Partners} />
                       <Route exact path="/register" component={Register} />
                       <Route exact path="/" component={Home} />
-
+                      <Route exact path="/regulamin.pdf" redirectTo="/regulamin.pdf" />
+                      <Route exact path="/regulamin2.pdf" redirectTo="/regulamin2.pdf" />
+                      <Route exact path="/przetwarzanie-danych.pdf" redirectTo="/przetwarzanie-danych.pdf" />
+                      <Route exact path="/old" redirectTo="/old/index.html" />
                     </Switch>
                   </CSSTransition>
                 </TransitionGroup>
