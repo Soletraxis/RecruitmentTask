@@ -41,11 +41,13 @@ input {
 .daas{
     width: 100%;
     height: 100%;
+    background-color: transparent;
     position: relative;
 }
 
 .qwe {
     display: block;
+    background-color: transparent;
     margin-left: auto;
     margin-right: auto;
     position: absolute;               /* 2 */
