@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import { Grid, Row, Col, Image } from 'react-bootstrap';
 import "./Organizers.css";
+import ContentDiv from '../CustomComponents/ContentDiv'
+
 
 class Organizers extends Component {
     render() {
         return (
-            <div className={Organizers}>
+            <ContentDiv >
                 <Grid>
                     <Row className="aboutBEST">
                         <Col xs={12} sm={6}>
@@ -74,7 +76,7 @@ class Organizers extends Component {
                             <i className="far fa-envelope"></i> <a href="mailto:albert.luczak@best.krakow.pl">albert.luczak@best.krakow.pl</a>
                         </Col>
 
-                        <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={3}>
+                        <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
                             <Image src={require('../img/ct/dominik.jpg')} circle />
                         </Col>
                         <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
@@ -82,9 +84,17 @@ class Organizers extends Component {
                             <i className="far fa-user"></i> Dominik Kołodziej<br/>
                             <i className="far fa-envelope"></i> <a href="mailto:dominik.kolodziej@best.krakow.pl">dominik.kolodziej@best.krakow.pl</a>
                         </Col>
+                        <Col className="CT_image" xs={8}  md={2} xsOffset={2} mdOffset={0}>
+                            <Image src={require('../img/ct/baitek.jpg')} circle />
+                        </Col>
+                        <Col className="CT_description" xs={8}  md={4} xsOffset={2} mdOffset={0}>
+                            <strong>Rekin</strong> <br/>
+                            <i className="far fa-user"></i> Baitek<br/>
+                            <i className="far fa-envelope"></i> <a href="mailto:baitek@best.krakow.pl">baitek@best.krakow.pl</a>
+                        </Col>
                     </Row>
                 </Grid>
-            </div>
+            </ContentDiv>
         );
     }
 }

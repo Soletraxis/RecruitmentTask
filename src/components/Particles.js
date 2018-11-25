@@ -21,11 +21,11 @@ class ParticlesJS extends Component{
                         opacity: 0.4,
                         width: 1
                     },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
                         },
                         polygon: {
                             nb_sides: 7
@@ -35,14 +35,14 @@ class ParticlesJS extends Component{
                         "detect_on": "canvas",
                         "events": {
                             "onhover": {
-                                "enable": true,
+                                "enable": false,
                                 "mode": "grab"
                             },
-                            "onclick": {
-                                "enable": false,
-                                "mode": "push"
+                            onclick: {
+                                enable: false,
+                                mode: "push"
                             },
-                            "resize": true
+                            resize: true
                         },
                         "modes": {
                             "grab": {
@@ -51,13 +51,13 @@ class ParticlesJS extends Component{
                                     "opacity": 1
                                 }
                             },
-                            "repulse": {
-                                "distance": 200,
-                                "duration": 0.4
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4
                             }
                         }
                     },
-                    "retina_detect": true
+                    retina_detect: true
                 }}
                 style={{
                     position: 'fixed',

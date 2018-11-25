@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import './Home.css'
+import { HashLink as Link } from 'react-router-hash-link'
+import ContentDiv from '../CustomComponents/ContentDiv'
 
 class Home extends Component {
     render() {
         return (
+          <ContentDiv>
             <Grid>
                 <div className="dream">
                     <Row>
@@ -14,14 +17,25 @@ class Home extends Component {
                                 you can <strong>HACK IT</strong>
                             </h1>
                             <p>
-                             <a href="https://www.newsite.best.krakow.pl/">
-                                 Poznaj nas >
-                             </a>
+                                <a href="https://www.newsite.best.krakow.pl/">
+                                    Poznaj nas &gt;<br/>
+                                </a>
+                            </p>
+                            <p>
+                                <Link to="/hackathon#faq">
+                                    FAQ &gt;<br/>
+                                </Link>
+                            </p>
+                            <p>
+                                <a href="http://www.bait.best.krakow.pl/2017/#/main/">
+                                    Poprzednia edycja &gt;<br/>
+                                </a>
                             </p>
                         </Col>
                     </Row>
                 </div>
             </Grid>
+          </ContentDiv>
         );
     }
 }

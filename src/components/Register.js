@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Grid, FormGroup, FormControl, ControlLabel, Form, Col, Row, Modal, Glyphicon} from 'react-bootstrap';
 
 import "./Register.css"
+import ContentDiv from '../CustomComponents/ContentDiv'
 
 import {ToastContainer, ToastStore} from 'react-toasts';
 import sendData from '../OnlineStuff/SpreadSheetGoogle'

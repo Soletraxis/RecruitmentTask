@@ -11,6 +11,7 @@ body {
     color: white;
     text-align: left;
     background: black url('./img/tlo.jpg') repeat-y;
+    background-attachment: fixed;
     background-size: 100%;
 
 }
