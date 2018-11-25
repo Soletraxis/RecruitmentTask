@@ -13,6 +13,7 @@
     "react-panel": "0.0.5",
     "react-panelgroup": "^1.0.7",
     "react-particles-js": "^2.3.0",
+    "react-pdf": "^4.0.0",
     "react-router-dom": "^4.3.1",
     "react-router-hash-link": "^1.2.1",
     "react-scripts": "^1.1.5",

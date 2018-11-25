@@ -14,15 +14,14 @@ class Footer extends Component {
                         </Col>
                         <Col xs={12} sm={4} className="organizers-section">
 
-
+                            <a href="https://drive.google.com/file/d/1NdmsN5xQHzUdhKPkG5t-0jd-PsHPgnHX/view?usp=sharing">Regulamin</a>
+                            <br/>
+                            <a href="https://drive.google.com/file/d/1Ugecp1mISIBd0s2yEzR53TgzzonJwOF6/view?usp=sharing">Informacje o przetwarzaniu danych</a>
+                            <br/>
+                            <br/>
                             <div className="organizer-title"><strong>Koordynator projektu</strong></div>
                             <div className="organizer-name"><i className="far fa-user"></i> Michał Błasiak</div>
                             <div className="organizer-mail"><i className="far fa-envelope"></i><a href="mailto:michal.blasiak@best.krakow.pl"> michal.blasiak@best.krakow.pl</a></div>
-                            <br/>
-
-                            <a href="/regulamin.pdf">Regulamin</a>
-                            <br/>
-                            <a href="/przetwarzanie-danych.pdf">Informacje o przetwarzaniu danych</a>
                             {/*
                             <div className="organizer-title"><strong> Koordynator ds. kontaktu z firmami</strong></div>
                             <div className="organizer-name"><i className="far fa-user"></i> Agata Redlich</div>
