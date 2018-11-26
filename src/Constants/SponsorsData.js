@@ -1,22 +1,15 @@
-import NokiaImage from '../img/partners/nokia.png'
-import EricssonImage from '../img/partners/ericsson.jpg'
+import QImage from '../img/partners/q.jpg'
 
 export default [
   {
-    link: 'https://nokia.com',
-    imageRef: NokiaImage,
+
+    link: ' https://www.qualtrics.com/careers/',
+    linkFB: 'https://www.facebook.com/AssecoPolandKariera',
+    linkJob: 'https://praca.asseco.com',
+    imageRef: QImage,
     xs: 12,
     mainSm: 4,
     subSm: 8,
     description1: 'Have fun with it. Zip. That easy. Working it up and down, back and forth. You can do anything your heart can imagine. It\'s all a game of angles. Let your heart take you to wherever you want to be.'
-  },
-  {
-    link: 'https://ericsson.com',
-    imageRef: EricssonImage,
-    xs: 12,
-    mainSm: 4,
-    subSm: 8,
-    description1: 'Even trees need a friend. We all need friends. Clouds are free they come and go as they please. Maybe there\'s a happy little Evergreen that lives here.'
-
   }
 ]
