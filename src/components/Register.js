@@ -176,7 +176,7 @@ class Register extends Component {
                     </div>
                     <Row>
                       <Col xsOffset={5} xs={1}>
-                        {this.state.participantNumber.length < 4 && <Glyphicon glyph='plus' onClick={this.addParticipant}/>}
+                        {this.state.participantNumber.length < 4 && <div onClick={this.addParticipant} style={{marginBottom: 15}}><Glyphicon glyph='plus' /></div>}
                       </Col>
                     </Row>
                     <Row>
