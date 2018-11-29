@@ -2,9 +2,10 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    position: absolute;               /* 2 */
+    position: center;               /* 2 */
     top: 50%;                         /* 3 */
     transform: translate(0, -50%);
+    margin-top: 0% ;
 }
 .row-eq-height {
     display: -webkit-box;

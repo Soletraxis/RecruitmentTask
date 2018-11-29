@@ -33,7 +33,7 @@ export default class Sponsor extends React.Component {
           <h3>{this.props.title}</h3>
           <p>{this.props.description1}</p>
           <p>{this.props.description2}</p>
-            <i className="fab fa-facebook-square fa-lg"></i> <a href={this.props.linkFB} className="partnerLink">{this.props.linkFB.substring(8)}</a><br/>
+            <i className="fab fa-facebook-square fa-lg"></i> <a href={this.props.linkFB} className="partnerLink">{this.props.linkFB.substring(24)}</a><br/>
           <i className="fa fa-globe fa-lg" aria-hidden="true"></i> <a href={this.props.link} className="partnerLink">{this.props.link.substring(8)}</a><br/>
           <i className="fa fa-users fa-lg" aria-hidden="true"></i> <a href={this.props.linkJob} className="partnerLink">{this.props.linkJob.substring(8)}</a>
         </Col>

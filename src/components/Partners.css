@@ -20,13 +20,9 @@
     padding: 20px;
 }
 
-.SGimg img{
-    background-color: white;
-
-}
 
 .SG {
-    margin-bottom: 40px;
+    margin-bottom: 400px;
 }
 
 .Sponsor {
@@ -65,6 +61,24 @@
 }
 
 .Q_img img {
-    width: 60%;
+    width: 65%;
+    margin-top: 0px;
 }
+.Ass_img img{
+    width: 100%;
+    margin-top: 0;
+}
+
+@media  screen and (min-width: 768px) {
+    .Q_img img {
+        margin-top: 15%;
+    }
+
+    .Ass_img img{
+        margin-top: 25%;
+
+    }
+}
+
+
 
