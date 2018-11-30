@@ -34,25 +34,26 @@ class Partners extends Component {
 */}
 
                     <Row className="Sponsor">
-                        <Col xs={12} sm={4} className="Simg">
-                            <div className="Ass_img">
-                                <a href="https://pl.asseco.com/kariera"><Image src={require('../img/partners/asseco.JPG')} /></a>
-                            </div>
-                        </Col>
-                        <Col xs={12} sm={8} className="Sdescription">
-                            <h3>Asseco Poland</h3>
-                            <p>
-                                Jesteśmy największą polską firmą informatyczną, która od ponad 25 lat tworzy zaawansowane technologicznie oprogramowanie dla firm z kluczowych sektorów gospodarki. Zatrudniamy blisko 2500 specjalistów w kilkunastu miastach w Polsce.
-                            </p>
-                            <p>
-                                Stoimy na czele międzynarodowej grupy kapitałowej Asseco. Jesteśmy największym dostawcą nowoczesnych rozwiązań informatycznych w Europie Środkowo-Wschodniej. Ponadto w rankingu Truffle 100, zajęliśmy szóste miejsce wśród największych producentów oprogramowania w Europie.
-                            </p>
-                            <i className="fa fa-globe" aria-hidden="true"></i> <a href="https://pl.asseco.com/kariera" className="partnerLink">pl.asseco.com/kariera</a><br/>
-                            <i className="fab fa-facebook-square fa-lg"></i> <a href="https://www.facebook.com/AssecoPolandKariera" className="partnerLink">/AssecoPolandKariera</a><br/>
-                            <i className="fa fa-users fa-lg"></i> <a href="https://praca.asseco.com" className="partnerLink">praca.asseco.com</a><br/><br/>
+                        <div className="glowny">
+                            <Col xs={12} sm={4} className="Simg">
+                                <div className="Ass_img">
+                                    <a href="https://pl.asseco.com/kariera"><Image src={require('../img/partners/asseco.JPG')} /></a>
+                                </div>
+                            </Col>
+                            <Col xs={12} sm={8} className="Sdescription">
+                                <h3>Asseco Poland</h3>
+                                <p>
+                                    Jesteśmy największą polską firmą informatyczną, która od ponad 25 lat tworzy zaawansowane technologicznie oprogramowanie dla firm z kluczowych sektorów gospodarki. Zatrudniamy blisko 2500 specjalistów w kilkunastu miastach w Polsce.
+                                </p>
+                                <p>
+                                    Stoimy na czele międzynarodowej grupy kapitałowej Asseco. Jesteśmy największym dostawcą nowoczesnych rozwiązań informatycznych w Europie Środkowo-Wschodniej. Ponadto w rankingu Truffle 100, zajęliśmy szóste miejsce wśród największych producentów oprogramowania w Europie.
+                                </p>
+                                <i className="fa fa-globe" aria-hidden="true"></i> <a href="https://pl.asseco.com/kariera" className="partnerLink">pl.asseco.com/kariera</a><br/>
+                                <i className="fab fa-facebook-square fa-lg"></i> <a href="https://www.facebook.com/AssecoPolandKariera" className="partnerLink">/AssecoPolandKariera</a><br/>
+                                <i className="fa fa-users fa-lg"></i> <a href="https://praca.asseco.com" className="partnerLink">praca.asseco.com</a><br/><br/>
 
-                        </Col>
-
+                            </Col>
+                        </div>
                     </Row>
 
                     <h2>Sponsorzy</h2>
@@ -103,6 +104,26 @@ class Partners extends Component {
 
                     </Row>
 
+                    <Row className="Sponsor">
+                        <Col xs={12} sm={4} className="Simg">
+                            <div className="Nok_img">
+                                <a href="http://nokiakrakow.pl/"><Image src={require('../img/partners/nokia.png')} /></a>
+                            </div>
+                        </Col>
+                        <Col xs={12} sm={8} className="Sdescription">
+                            <h3>Nokia</h3>
+                            <p>
+                                Firma Nokia tworzy technologie łączące świat. Wspierana przez badania i innowacje laboratoriów Nokia Bell Labs służy dostawcom usług telekomunikacyjnych, administracji, dużym przedsiębiorstwom oraz konsumentom najbardziej kompletnym, całościowym portfolio produktów, usług i licencji w branży telekomunikacyjnej.
+                                Od infrastruktury umożliwiającej działanie sieci 5G oraz Internetu rzeczy, do rozwijających się aplikacji dla wirtualnej rzeczywistości i cyfrowego zdrowia, Nokia kształtuje przyszłość technologii, które pozwolą przekształcić ludzkie doświadczenia.
+
+                            </p>
+
+                            <i className="fa fa-globe" aria-hidden="true"></i> <a href="http://nokiakrakow.pl/" className="partnerLink">nokiakrakow.pl/</a><br/>
+                            <i className="fab fa-facebook-square fa-lg"></i> <a href="https://www.facebook.com/rdkrakow/" className="partnerLink">/rdkrakow/</a><br/>
+
+                        </Col>
+
+                    </Row>
 
 
                     <h2>Patroni honorowi</h2>

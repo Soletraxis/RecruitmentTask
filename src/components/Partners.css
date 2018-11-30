@@ -48,25 +48,39 @@
 }
 
 .logoP1, .logoP2, .logoP3{
-    width: 70%;
+    width: 50%;
 }
 
 .logoP2{
-    margin-top: 13%;
+    margin-top: 10%;
 }
 
 .logoP3{
-    margin-top: 22%;
+    margin-top: 16%;
     margin-bottom:30px;
+}
+.glowny{
+    font-size: 105%;
 }
 
 .Q_img img {
     width: 65%;
     margin-top: 0px;
+
 }
 .Ass_img img{
     width: 100%;
     margin-top: 0;
+    background-color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+}
+
+.Nok_img img {
+    width: 85%;
+    margin-top: 0px;
+    background-color: white;
 }
 
 @media  screen and (min-width: 768px) {
@@ -77,6 +91,10 @@
     .Ass_img img{
         margin-top: 25%;
 
+    }
+
+    .Nok_img img {
+        margin-top: 15%;
     }
 }
 
