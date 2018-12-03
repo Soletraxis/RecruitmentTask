@@ -144,7 +144,7 @@ class Partners extends Component {
                             <p>
                                 Naszą wizją jest Networked Society – zbudowanie społeczeństwa operującego w sieci, w którym każdy z nas dzięki technologii ma możliwość w pełni wykorzystać swój potencjał. By wprowadzić tę wizję w życie, potrzebujemy odpowiednich ludzi – takich jak Ty.
                             </p>
-                            <i className="fa fa-globe" aria-hidden="true"></i> <a href="http://nokiakrakow.pl/" className="partnerLink">nokiakrakow.pl</a><br/>
+                            <i className="fa fa-globe" aria-hidden="true"></i> <a href="https://www.ericsson.com/pl/pl" className="partnerLink">www.ericsson.com/pl/pl</a><br/>
 
                         </Col>
 
@@ -166,7 +166,7 @@ class Partners extends Component {
                             <p>
                                 Jesteśmy młodym, aktywnym i szybko rozwijającym się zespołem inżynierów realizującym dedykowane systemy dla międzynarodowych firm produkcyjnych. Jeśli lubisz wyzwania i chcesz wspólnie z nami tworzyć i rozwijać autorskie oprogramowanie implementowane na całym świecie – dołącz do naszego zespołu.                            </p>
 
-                            <i className="fa fa-globe" aria-hidden="true"></i> <a href="https://www.ericsson.com/pl/pl" className="partnerLink">www.ericsson.com/pl/pl</a><br/>
+                            <i className="fa fa-globe" aria-hidden="true"></i> <a href="https://antsolutions.eu/" className="partnerLink">antsolutions.eu/</a><br/>
                         </Col>
 
                     </Row>
