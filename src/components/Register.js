@@ -133,8 +133,8 @@ class Register extends Component {
                       </Col>
                       <Col xsOffset={1} xs={2}>
                         <label className={`checkbox-inline ${this.isRoboticOver() ?  'gray-out' : ''}`} onClick={() => {
-                          if(!this.isRoboticOver()){ this.changeCompetitionType(false)}
-                        }}><input disabled={this.isRoboticOver()} type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
+                          if(this.isRoboticOver()){ this.changeCompetitionType(false)}
+                        }}><input disabled={!this.isRoboticOver()} type="checkbox" checked={!this.state.isClassic}/>Część Robotyczna</label>
                       </Col>
                     </Row>
                     <div>

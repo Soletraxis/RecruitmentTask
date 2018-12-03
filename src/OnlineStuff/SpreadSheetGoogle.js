@@ -7,7 +7,7 @@ const sendData = (data, toast, errortoast, hideModal) => {
   let emptyRowNumber;
   async.series([
       function setAuth (step) {
-        const creds = require('../bitehack-f53d0f56bcd4.json');
+        const creds = require('../Recruter-c0a61ccafe08.json');
 
         doc.useServiceAccountAuth(creds, step);
       },
