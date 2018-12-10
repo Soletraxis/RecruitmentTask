@@ -139,12 +139,14 @@ class Register extends Component {
                     </Row>
                     <div>
                       <Row>
-                      <Col xs={5} xsOffset={3}>
-                      <FormGroup>
-                        <ControlLabel>Nazwa drużyny:  </ControlLabel>
-                        <FormControl placeholder='Nazwa drużyny' id={'teamName'} className={this.state.errors.includes('teamName') ? 'error' : '' }/>
-                      </FormGroup>
-                      </Col>
+                        <div className='row-eq-height'>
+                          <Col xs={5} >
+                          <FormGroup>
+                            <ControlLabel>Nazwa drużyny:  </ControlLabel>
+                            <FormControl placeholder='Nazwa drużyny' id={'teamName'} className={this.state.errors.includes('teamName') ? 'error' : '' }/>
+                          </FormGroup>
+                          </Col>
+                        </div>
                       </Row>
                       {this.state.participantNumber.map((i) => {
                         return(
@@ -175,14 +177,18 @@ class Register extends Component {
                         )})}
                     </div>
                     <Row>
-                      <Col xsOffset={5} xs={1}>
+                    <div className='row-eq-height'>
+                      <Col xs={1}>
                         {this.state.participantNumber.length < 4 && <div onClick={this.addParticipant} style={{marginBottom: 15}}><Glyphicon glyph='plus' /></div>}
                       </Col>
+                      </div>
                     </Row>
                     <Row>
-                      <Col smOffset={4} xs={3}>
+                      <div className='row-eq-height'>
+                      <Col xs={3}>
                         <button type='submit' color='orange' className='button' onClick={this.submitForm}>Zgłaszam drużynę!</button>
                       </Col>
+                      </div>
                     </Row>
 
                   </Form>

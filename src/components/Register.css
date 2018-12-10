@@ -61,8 +61,10 @@ input {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .gray-out {
     opacity: 0.5;
 }
+
